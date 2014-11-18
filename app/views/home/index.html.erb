@@ -1,0 +1,13 @@
+<p>Helo!</p>
+<ul>
+<% @universities.each do |university| %>
+	<p><%= image_tag(university.image) %></p>
+	<% university.faculties.each do |faculty|%>
+		<li>
+			<p><%= faculty.study.name %></p>
+			<p><%= faculty.study.description %></p>
+		</li>
+	<%end%>
+<%end%>
+</ul>
+

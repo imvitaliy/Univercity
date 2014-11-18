@@ -1,0 +1,7 @@
+<ul>
+	<% @faculties.each do |faculty| %>
+		<h2><%= faculty.study.name %></h2>
+		<h3><%= faculty.university.name %></h3>
+		<p><%= image_tag(faculty.university.image) %></p>
+	<%end%>
+</ul>
