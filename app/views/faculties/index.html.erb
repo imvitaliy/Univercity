@@ -1,7 +1,13 @@
-<ul>
+
+<ul class="all_faculty_list">
 	<% @faculties.each do |faculty| %>
-		<h2><%= faculty.study.name %></h2>
-		<h3><%= faculty.university.name %></h3>
-		<p><%= image_tag(faculty.university.image) %></p>
+		<li class="faculties_list">
+		<%= image_tag(faculty.university.image, class: "uni_image") %>
+		<h5>
+			<p></p>
+		 <%= faculty.study.name %></h5>
+		<p class="description"><%= faculty.study.description %></p>
+		<p class="global_score"><%=faculty.global_score%></p>
+		</li>
 	<%end%>
 </ul>

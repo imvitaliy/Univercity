@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20141117170529) do
     t.integer  "students_number"
     t.integer  "teachers_number"
     t.string   "address"
+    t.decimal  "global_score"
     t.integer  "study_id"
     t.integer  "university_id"
     t.datetime "created_at"
@@ -36,7 +37,6 @@ ActiveRecord::Schema.define(version: 20141117170529) do
     t.string   "name"
     t.string   "city"
     t.text     "description"
-    t.decimal  "global_score"
     t.string   "image"
     t.integer  "students_number"
     t.boolean  "public",          default: true
