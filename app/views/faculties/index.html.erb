@@ -1,3 +1,12 @@
+<!-- aqui empieza busqueda-->
+
+<%= form_tag("/faculties/", method: "get") do %>
+  <%= text_field_tag :text, params[:text], class: "search" %>
+  <%= submit_tag("Search", class: "button_search") %>
+<% end %>
+
+
+<!-- se acaba la busqueda-->
 
 <ul class="all_faculty_list">
 	<% @faculties.each do |faculty| %>
