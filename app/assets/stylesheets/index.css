@@ -23,14 +23,33 @@ body{
 .button_search{
 	width: 150px;
 	height: 40px;
+	border-radius: 3px;
+	background-color: rgba(255, 255, 255, 0.7);
+transition:All 0.4426s ease;
+-webkit-transition:All 0.4426s ease;
+-moz-transition:All 0.4426s ease;
+-o-transition:All 0.4426s ease;
+transform: rotate(0deg) scale(1) skew(1deg) translate(10px);
+-webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(10px);
+-moz-transform: rotate(0deg) scale(1) skew(1deg) translate(10px);
+-o-transform: rotate(0deg) scale(1) skew(1deg) translate(10px);
+-ms-transform: rotate(0deg) scale(1) skew(1deg) translate(10px);
 }
+.button_search:hover{
+transform: rotate(0deg) scale(1.167) skew(1deg) translate(10px);
+-webkit-transform: rotate(0deg) scale(1.167) skew(1deg) translate(10px);
+-moz-transform: rotate(0deg) scale(1.167) skew(1deg) translate(10px);
+-o-transform: rotate(0deg) scale(1.167) skew(1deg) translate(10px);
+-ms-transform: rotate(0deg) scale(1.167) skew(1deg) translate(10px);
+}
+
 .all_faculty_list{
 	margin:0 10%;
-  height: 500px;
+	min-height: 134px;
+  max-height: 500px;
  	overflow: scroll;
   overflow-x: hidden;
 	margin-top: 120px;
-
 }
 
 .faculties_list{
@@ -40,6 +59,13 @@ body{
 	list-style: none;
 	position: relative;
 	border:1px solid rgba(215, 223, 221, 0.8);;
+}
+.boton_enlace{
+	position: absolute;
+	background-color: green;
+	width: 100px;
+	height: 100px:;
+
 }
 .faculties_list:hover{
 	background-color: rgba(255, 255, 255, 0.7);
@@ -66,7 +92,44 @@ body{
 	color: green;
 	background-color: rgba(215, 223, 221, 0.8);;
 	position: absolute;
-	right: 25px;
-	top: 3%;
+	right: 20px;
+	top: -25px;
 	border-radius: 30px;
 }
+.ok_like{
+  background: url('/index/ok_like.jpg') no-repeat;
+	position: absolute;
+	right: 55px;
+	bottom: 5px;
+	width: 40px;
+	height: 50px;
+}.ok_like:active{
+  background: url('/index/ok_like_active.jpg') no-repeat;
+	position: absolute;
+	right: 55px;
+	bottom: -5px;
+	width: 40px;
+	height: 50px;
+}.dislike{
+  background: url('/index/dislike.jpg') no-repeat;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	width: 40px;
+	height: 50px;
+}.dislike:active{
+  background: url('/index/dislike_active.jpg') no-repeat;
+	position: absolute;
+	right: 5px;
+	bottom: -5px;
+	width: 40px;
+	height: 50px;
+}
+.spaceleft{
+	position: absolute;
+	right: 1px;
+	bottom: 9px;
+	width: 1px;
+	height: 1px;
+}
+

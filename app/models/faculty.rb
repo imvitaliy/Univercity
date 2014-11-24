@@ -3,6 +3,6 @@ class Faculty < ActiveRecord::Base
 	belongs_to :study
 
 	def self.search(text)
-		joins(:study).where("studies.name like ?", "%#{text}%")
+		joins(:study, :university).where("studies.name like ? OR universities.city like ?", "%#{text}%","%#{text}%")
 	end
 end

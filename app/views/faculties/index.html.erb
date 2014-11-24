@@ -4,19 +4,31 @@
   <%= text_field_tag :text, params[:text], class: "search" %>
   <%= submit_tag("Search", class: "button_search") %>
 <% end %>
+<select class="select">
+ <%= options_for_select(["Derecho", "Medicina", "Informática", "Filologia"], disabled: "Filologia") %>
+</select>
 
+    <select class="select">
+		<option value="city" class="select_city">Madrid</option>
+		<option value="city" class="select_city">Barcelona</option>
+    </select>
 
 <!-- se acaba la busqueda-->
 
 <ul class="all_faculty_list">
 	<% @faculties.each do |faculty| %>
 		<li class="faculties_list">
-		<%= image_tag(faculty.university.image, class: "uni_image") %>
-		<h5>
-			<p></p>
-		 <%= faculty.study.name %></h5>
-		<p class="description"><%= faculty.study.description %></p>
-		<p class="global_score"><%=faculty.global_score%></p>
+			<div class="boton_enlace"></div>
+			<%= image_tag(faculty.university.image, class: "uni_image") %>
+			<h5>
+				<p></p>
+			 <%= faculty.study.name %></h5>
+			<p class="description"><%= faculty.study.description %></p>
+			
+			<div class="ok_like"></div>
+			<p class="global_score"><%= faculty.global_score %></p>
+			<div class="dislike"></div>
+			<div class="spaceleft"></div>
 		</li>
-	<%end%>
+	<% end %>
 </ul>
