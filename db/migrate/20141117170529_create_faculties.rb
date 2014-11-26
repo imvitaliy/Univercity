@@ -8,6 +8,8 @@ class CreateFaculties < ActiveRecord::Migration
       t.decimal :global_score
     	t.integer :study_id
     	t.integer :university_id
+      t.decimal :longitud
+      t.decimal :latitud
       t.timestamps
     end
   end

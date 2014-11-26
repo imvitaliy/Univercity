@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20141117170529) do
     t.decimal  "global_score"
     t.integer  "study_id"
     t.integer  "university_id"
+    t.decimal  "longitud"
+    t.decimal  "latitud"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

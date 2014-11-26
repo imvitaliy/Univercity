@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get '/', to: 'home#index'
-  get '/faculties', to: 'faculties#index'
+  
+  resources :faculties, only: [:index, :show]
 
+  #get '/faculties', to: 'faculties#index'
+  #get '/faculties/:id', to: 'faculties#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

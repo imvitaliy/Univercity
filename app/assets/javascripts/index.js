@@ -31,6 +31,33 @@ function quitelike(target){
 	};
 };
 
+function showlocation(){
+var latitud2 = document.getElementById('latitud');
+var longitud2 = document.getElementById('longitud');
+var latitud=latitud2.textContent
+var longitud=longitud2.textContent
+
+var madrid = new google.maps.LatLng(latitud,longitud);
+var opciones = {
+    zoom : 13,
+    center: madrid,
+ 
+};
+var div = document.getElementById('mapa');
+var map = new google.maps.Map(div, opciones);
+var latitud1 = document.getElementById('latitud');
+var longitud1 = document.getElementById('longitud');
+var latitud=latitud1.textContent
+var longitud=longitud1.textContent
+putMarker(latitud,longitud);
+
+function putMarker(latitud, longitud){
+	return new google.maps.Marker({
+  position: new google.maps.LatLng(latitud,longitud),
+  map: map
+});
+}
+};	
 /*dislike.onclick = quitelike;
 function quitelike(e){
 	if (e.target.className === "global_score")

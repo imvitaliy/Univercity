@@ -1,30 +1,28 @@
 <!-- aqui empieza busqueda-->
 
-<%= form_tag("/faculties/", method: "get") do %>
+<%= form_tag(faculties_path, method: "get") do %>
   <%= text_field_tag :text, params[:text], class: "search" %>
   <%= submit_tag("Search", class: "button_search") %>
 <% end %>
-<select class="select">
- <%= options_for_select(["Derecho", "Medicina", "Informática", "Filologia"], disabled: "Filologia") %>
-</select>
 
-    <select class="select">
-		<option value="city" class="select_city">Madrid</option>
-		<option value="city" class="select_city">Barcelona</option>
-    </select>
+<!--%=select_tag "study_name", options_for_select(["Derecho", "Medicina", "Informática", "Filologia"]), class: 'select'% >
+
+< %=select_tag "faculty_city_name", options_for_select(["Madrid", "Barcelona"])%-->
 
 <!-- se acaba la busqueda-->
 
 <ul class="all_faculty_list">
 	<% @faculties.each do |faculty| %>
 		<li class="faculties_list">
-			<div class="boton_enlace"></div>
-			<%= image_tag(faculty.university.image, class: "uni_image") %>
-			<h5>
-				<p></p>
-			 <%= faculty.study.name %></h5>
-			<p class="description"><%= faculty.study.description %></p>
-			
+			 <%= link_to faculty_path(faculty.id), class:"path" do %>
+				<div class="boton_enlace"></div>
+				<%= image_tag(faculty.university.image, class: "uni_image") %>
+				<h5 class="study_name_list">
+					<p></p>
+				<%= faculty.study.name %></h5>
+				<p class="description"><%= faculty.study.description %></p>
+			<% end %>
+
 			<div class="ok_like"></div>
 			<p class="global_score"><%= faculty.global_score %></p>
 			<div class="dislike"></div>

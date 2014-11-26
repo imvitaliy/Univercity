@@ -1,1 +1,32 @@
-<%= @faculties %>
+
+<article id="bodybox">
+	<div class="box">
+		<p><%= image_tag(@faculty.university.image, class: "uni_image") %></p>
+		<p class="studyname"><%= @faculty.study.name%></p><br>
+
+		<p class="global_score_faculty"><%= @faculty.global_score%></p><br>
+
+		<p class="city">Ciudad: <%= @faculty.university.city%></p><br>
+		<p class="students_faculty">Nota de Acceso: "<%= @faculty.acess_notes%>"</p><br>
+
+		<p class="students_faculty">Alumnos en la facultad: <%= @faculty.students_number%><br></p>
+
+		<p class="description_faculty">Description:</p>
+
+		<p class="description_study"> <%= @faculty.study.description%><br></p>
+
+		<seciton class="description_general_faculty">
+
+				<div class="stud_teacher_number"><%= @faculty.university.name%><br></div><br>
+
+				<div class="description_university"><%= @faculty.university.description%></div><br>
+
+				<div class="stud_teacher_number">Alumnos en la universidad: <%= @faculty.university.students_number%></div><br>
+
+				<div class="stud_teacher_number">Pofesores en la universidad: <%= @faculty.teachers_number%></div><br>
+		</section>
+	</div>
+	<div id="latitud"> <%= @faculty.latitud %> </div>
+	<div id="longitud"> <%= @faculty.longitud %> </div>
+	<div id="mapa"></div>
+</article>
