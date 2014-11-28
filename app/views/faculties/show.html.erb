@@ -1,10 +1,12 @@
 
+			<div class="showvote">
+			<%= rating_for @faculty %>
+			</div>
 <article id="bodybox">
 	<div class="box">
 		<p><%= image_tag(@faculty.university.image, class: "uni_image") %></p>
 		<p class="studyname"><%= @faculty.study.name%></p><br>
 
-		<p class="global_score_faculty"><%= @faculty.global_score%></p><br>
 
 		<p class="city">Ciudad: <%= @faculty.university.city%></p><br>
 		<p class="students_faculty">Nota de Acceso: "<%= @faculty.acess_notes%>"</p><br>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117170529) do
+ActiveRecord::Schema.define(version: 20141126163140950820) do
 
   create_table "faculties", force: true do |t|
     t.decimal  "acess_notes"
@@ -26,6 +26,20 @@ ActiveRecord::Schema.define(version: 20141117170529) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "seems_rateable_rates", force: true do |t|
+    t.integer  "rater_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.float    "stars",         null: false
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "seems_rateable_rates", ["dimension"], name: "index_seems_rateable_rates_on_dimension"
+  add_index "seems_rateable_rates", ["rateable_id", "rateable_type"], name: "index_seems_rateable_rates_on_rateable_id_and_rateable_type"
+  add_index "seems_rateable_rates", ["rater_id"], name: "index_seems_rateable_rates_on_rater_id"
 
   create_table "studies", force: true do |t|
     t.string   "name"
@@ -42,6 +56,13 @@ ActiveRecord::Schema.define(version: 20141117170529) do
     t.string   "image"
     t.integer  "students_number"
     t.boolean  "public",          default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

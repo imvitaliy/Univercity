@@ -23,10 +23,14 @@
 				<p class="description"><%= faculty.study.description %></p>
 			<% end %>
 
-			<div class="ok_like"></div>
-			<p class="global_score"><%= faculty.global_score %></p>
+			<div class="pepevote">
+			<%= rating_for faculty %>
+			</div>
+
+			<!--<div class="ok_like"></div>
+			<p class="global_score">--><!--%= faculty.global_score %></p>
 			<div class="dislike"></div>
-			<div class="spaceleft"></div>
+			<div class="spaceleft"></div>-->
 		</li>
 	<% end %>
 </ul>

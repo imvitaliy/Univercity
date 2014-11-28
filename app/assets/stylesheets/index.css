@@ -155,3 +155,12 @@ transform: rotate(0deg) scale(1.167) skew(1deg) translate(10px);
 	background-color: rgba(215, 223, 221, 0);
 	border: none;
 }
+.pepevote{
+	position: absolute;
+	right: 10px;
+	top:45px;
+	width: 110px;
+	height: 25px;
+	background-color: white;
+	padding: 10px;
+}

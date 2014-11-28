@@ -1,7 +1,7 @@
 class Faculty < ActiveRecord::Base
 	belongs_to :university
 	belongs_to :study
-
+	seems_rateable # :quality, :speed, :effectiveness
 	scope :order_by_score, -> { order global_score: :desc}
 
 	def self.search(text)

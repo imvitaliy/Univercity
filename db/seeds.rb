@@ -99,6 +99,11 @@ Faculty.create([{
 	latitud: 41.38760601399428
 }])
 
+user1=User.create(username: "Pablo", email: "pablo@email.com")
+user2=User.create(username: "David", email: "David@email.com")
+user3=User.create(username: "Miguel", email: "Miguel@email.com")
+user4=User.create(username: "Alberto", email: "Alberto@email.com")
+user5=User.create(username: "Chris", email: "Chris@email.com")
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #

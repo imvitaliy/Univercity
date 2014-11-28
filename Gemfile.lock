@@ -82,6 +82,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seems_rateable (2.0.0)
+      jquery-rails
+      rails (>= 4.0.0)
     sprockets (2.11.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -115,6 +118,7 @@ DEPENDENCIES
   rails (= 4.1.7)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  seems_rateable
   sqlite3
   turbolinks
   tzinfo-data

@@ -83,3 +83,12 @@ html, body{
 #longitud{
 	visibility: hidden;
 }
+.showvote{
+	position: absolute;
+	right: 300px;
+	top: 170px;
+	width: 110px;
+	height: 25px;
+	background-color: white;
+	padding: 10px;
+}

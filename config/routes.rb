@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  seems_rateable
   get '/', to: 'home#index'
   
   resources :faculties, only: [:index, :show]
